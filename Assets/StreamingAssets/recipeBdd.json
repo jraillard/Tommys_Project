@@ -1,0 +1,40 @@
+﻿//Json file storing all the recipes
+{
+  "recipes": [
+    { //first recette
+      "name": "BigMac",
+      "ingredients": [
+        "painTrancheInferieur",
+        "fromage",
+        "steack",
+        "salade",
+        "tomate",
+        "painTrancheSuperieur"
+      ]
+    },
+
+    { //second recette
+      "name": "BigMac2",
+      "ingredients": [
+        "painTrancheInferieur",
+        "steack",
+        "salade",
+        "fromage",
+        "tomate",
+        "painTrancheSuperieur"
+      ]
+    },
+
+    { //third recette
+      "name": "BigMac2",
+      "ingredients": [
+        "painTrancheInferieur",
+        "salade",
+        "steack",
+        "tomate",
+        "fromage",
+        "painTrancheSuperieur"
+      ]
+    }
+  ]
+}

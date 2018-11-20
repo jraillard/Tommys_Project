@@ -1,0 +1,4 @@
+﻿//Json file storing all the recipes played in the current game
+{
+  "recipes": []
+}
