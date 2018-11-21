@@ -3,36 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Recipe : MonoBehaviour {
+[Serializable]
+public class Recipe {
 
-    private string _recipeName = "";
-    private List<string> _ingredients = new List<string>();
-
-    public Recipe(string name, List<string> ingredients)
-    {
-        _recipeName = name;
-
-        foreach(string s in ingredients)
-        {
-            _ingredients.Add(s);
-        }
-    }
-
-    public string GetName()
-    {
-        return _recipeName;
-    }
+    public string recipeName;
+    public List<string> ingredients;
 
     public bool IsRecipeOk(List<string> sendIngredients)
     {
-        if (_ingredients.Count != sendIngredients.Count) return false;
+        if (ingredients.Count != sendIngredients.Count) return false;
 
-        int length = _ingredients.Count;
+        int length = ingredients.Count;
         bool check = true;
 
-        for(int i = 0; i< length; i++)
+        for (int i = 0; i < length; i++)
         {
-            if(_ingredients[i] != sendIngredients[i])
+            if (ingredients[i] != sendIngredients[i])
             {
                 check = false;
                 break;
@@ -40,5 +26,17 @@ public class Recipe : MonoBehaviour {
         }
 
         return check;
+    }
+
+    public override string ToString()
+    {
+        string str = $"*****\nRecette {recipeName} : \n";
+
+        foreach (string s in ingredients)
+        {
+            str += $"- {s}";
+        }
+
+        return str += "****\n";
     }
 }

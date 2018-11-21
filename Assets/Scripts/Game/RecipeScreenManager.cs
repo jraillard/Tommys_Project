@@ -24,7 +24,7 @@ public class RecipeScreenManager : MonoBehaviour {
     public void RemoveRecipe(string recipeName)
     {
         // TODO : remove recipe object
-        Recipe recipeToRemove = _recipes.Where(r => r.Key.GetName() == recipeName).Select(r => r.Key).FirstOrDefault();
+        Recipe recipeToRemove = _recipes.Where(r => r.Key.recipeName == recipeName).Select(r => r.Key).FirstOrDefault();
         _recipes.Remove(recipeToRemove);
     }
     
