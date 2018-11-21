@@ -3,40 +3,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public class Recipe {
-
-    public string recipeName;
-    public List<string> ingredients;
-
-    public bool IsRecipeOk(List<string> sendIngredients)
+namespace Assets.Scripts.Game
+{
+    [Serializable]
+    public class Recipe
     {
-        if (ingredients.Count != sendIngredients.Count) return false;
 
-        int length = ingredients.Count;
-        bool check = true;
+        public string recipeName;
+        public List<string> ingredients;
 
-        for (int i = 0; i < length; i++)
+        public bool IsRecipeOk(List<string> sendIngredients)
         {
-            if (ingredients[i] != sendIngredients[i])
+            if (ingredients.Count != sendIngredients.Count) return false;
+
+            int length = ingredients.Count;
+            bool check = true;
+
+            for (int i = 0; i < length; i++)
             {
-                check = false;
-                break;
+                if (ingredients[i] != sendIngredients[i])
+                {
+                    check = false;
+                    break;
+                }
             }
+
+            return check;
         }
 
-        return check;
-    }
-
-    public override string ToString()
-    {
-        string str = $"*****\nRecette {recipeName} : \n";
-
-        foreach (string s in ingredients)
+        public override string ToString()
         {
-            str += $"- {s}";
-        }
+            string str = $"*****\nRecette {recipeName} : \n";
 
-        return str += "****\n";
+            foreach (string s in ingredients)
+            {
+                str += $"- {s}";
+            }
+
+            return str += "****\n";
+        }
     }
 }

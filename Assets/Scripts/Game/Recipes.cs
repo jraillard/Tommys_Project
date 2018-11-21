@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-[Serializable]
-public class Recipes
+namespace Assets.Scripts.Game
 {
-    public List<Recipe> recipes;
+    [Serializable]
+    public class Recipes
+    {
+        public List<Recipe> recipes;
+    }
 }
