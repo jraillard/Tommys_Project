@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 896e8af1b07539d4fa6d57591e79ba3b
 ModelImporter:
-  serializedVersion: 23
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: Group_001
     100002: Group_002
@@ -109,8 +109,6 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
