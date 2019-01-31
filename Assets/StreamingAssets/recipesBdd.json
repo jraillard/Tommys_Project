@@ -1,39 +1,124 @@
 ﻿{
   "recipes": [
     { 
-      "recipeName": "BigMac",
+      "recipeName": "Bag Mic",
       "ingredients": [
-        "painTrancheInferieur",
-        "fromage",
-        "steak",
-        "salade",
-        "tomate",
-        "painTrancheSuperieur"
+        "PainTrancheInferieur",
+        "Salade",
+        "Steak",        
+		"Fromage",
+        "PainTrancheSuperieur"
       ]
     },
-
     { 
-      "recipeName": "BigMac2",
+      "recipeName": "Bag Mic XL",
       "ingredients": [
-        "painTrancheInferieur",
-        "steak",
-        "salade",
-        "fromage",
-        "tomate",
-        "painTrancheSuperieur"
+        "PainTrancheInferieur",
+		"Salade",
+        "Steak",
+        "Fromage",
+		"Steak",
+        "Fromage",		
+        "PainTrancheSuperieur"
       ]
     },
-
     { 
-      "recipeName": "BigMac2",
+      "recipeName": "Bag Mic XXL",
       "ingredients": [
-        "painTrancheInferieur",
-        "salade",
-        "steak",
-        "tomate",
-        "fromage",
-        "painTrancheSuperieur"
+        "PainTrancheInferieur",
+        "Salade",
+        "Steak",
+		"Fromage", 
+		"Steak",
+        "Fromage",
+		"Steak",
+        "Fromage",		
+        "PainTrancheSuperieur"
+      ]
+    }, 	
+	{ 
+      "recipeName": "Le 4 Fromages",
+      "ingredients": [
+        "PainTrancheInferieur",
+        "Fromage",
+		"Fromage",
+		"Fromage",
+		"Fromage",
+        "PainTrancheSuperieur"
+      ]
+    },	
+	{ 
+      "recipeName": "Le Carnivore",
+      "ingredients": [
+        "PainTrancheInferieur",
+        "Steak",
+		"Steak",
+		"Steak",
+		"Steak",		
+        "PainTrancheSuperieur"
+      ]
+    },
+	{ 
+      "recipeName": "Le Veggie",
+      "ingredients": [
+        "PainTrancheInferieur",
+		"Salade",
+		"Salade",
+		"Salade",
+		"Salade",		
+        "PainTrancheSuperieur"
+      ]
+    },
+	{ 
+      "recipeName": "Le Francais",
+      "ingredients": [
+        "PainTrancheInferieur",
+        "Salade",
+		"Steak",
+		"Fromage",
+		"PainTrancheInferieur",	
+		"Fromage",
+		"Salade",
+		"Steak",
+		"Fromage",		
+        "PainTrancheSuperieur"
+      ]
+    },
+	{ 
+      "recipeName": "Le Coupe Faim",
+      "ingredients": [
+        "PainTrancheInferieur",	
+        "PainTrancheSuperieur"
+      ]
+    },	
+	{ 
+      "recipeName": "Le BurgerCeption",
+      "ingredients": [
+        "PainTrancheInferieur",
+		"PainTrancheInferieur",	
+		"Salade",
+        "Steak",        
+		"Fromage",
+        "PainTrancheSuperieur",		
+        "PainTrancheSuperieur"
+      ]
+    },
+	{ 
+      "recipeName": "Le PUISSANCE 4",
+      "ingredients": [
+        "PainTrancheInferieur",
+		"PainTrancheInferieur",	
+		"PainTrancheInferieur",
+		"PainTrancheInferieur",
+		"Salade",
+        "Steak",        
+		"Fromage",
+        "PainTrancheSuperieur",		
+        "PainTrancheSuperieur",
+        "PainTrancheSuperieur",		
+        "PainTrancheSuperieur"
       ]
     }
+	
   ]
 }

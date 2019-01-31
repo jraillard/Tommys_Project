@@ -8,7 +8,6 @@ namespace Assets.Scripts.Game
     [Serializable]
     public class Recipe
     {
-
         public string recipeName;
         public List<string> ingredients;
 

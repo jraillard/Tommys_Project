@@ -1,4 +1,1 @@
-﻿//Json file storing all the recipes played in the current game
-{
-  "recipes": []
-}
+{"recipes":[{"recipeName":"Le Veggie","ingredients":["PainTrancheInferieur","Salade","Salade","Salade","Salade","PainTrancheSuperieur"]},{"recipeName":"Le Coupe Faim","ingredients":["PainTrancheInferieur","PainTrancheSuperieur"]}]}

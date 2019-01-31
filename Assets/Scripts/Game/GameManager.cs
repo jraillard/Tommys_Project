@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts.Game
 {
     public class GameManager : MonoBehaviour
     {
+        public SoundManager _soundManager;
+        public BurgerModelBuilder _burgerModelBuilder;
         private Recipes _recipesToPlay;
-
+        private Recipe _currentRecipe;
 
         void Awake()
         {
@@ -19,45 +22,51 @@ namespace Assets.Scripts.Game
         // Use this for initialization
         void Start()
         {
-            // TODO : recup dans fichier json (recipe.json) les recettes à jouer
+            // recup dans fichier json (recipe.json) les recettes à jouer
             _recipesToPlay = RecipeManager.GetRecipesToPlay();
-            // TODO : initiate consumable boxes => Ressources.LoadAll("Consumables")
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
-        public void SelectRecipe()
-        {
-            throw (new NotImplementedException("SelectRecette"));
+            _currentRecipe = _recipesToPlay.Get(0);
+            _burgerModelBuilder.BuildBurgerModel(_currentRecipe);
         }
 
         public void CheckRecipe()
         {
-            throw (new NotImplementedException("CheckRecette"));
+            List<string> ingredients = new List<string>();
+            foreach(Transform child in transform)
+            {
+                ingredients.Add(child.name);
+                // destroy ingredient
+                Destroy(child.gameObject);
+            }
+
+            if (_currentRecipe.IsRecipeOk(ingredients))
+            {
+                _soundManager.PlayRecipeSound(true);
+
+                ChangeRecipe();
+
+                Debug.Log("Current Recipe Changed");
+            }
+            else { _soundManager.PlayRecipeSound(false); Debug.Log("Wrong recipe"); }
         }
 
-        public void Pause()
+        private void ChangeRecipe()
         {
-            throw (new NotImplementedException("Pause"));
-        }
+            _recipesToPlay.Remove(_currentRecipe);
+            _burgerModelBuilder.CleanModel();
 
-        public void Exit()
-        {
-            throw (new NotImplementedException("Exit"));
+            if (_recipesToPlay.Count() == 0) Win();
+            else
+            {
+                _currentRecipe = _recipesToPlay.Get(0);
+                Debug.Log(_currentRecipe);
+                _burgerModelBuilder.BuildBurgerModel(_currentRecipe);
+            }
         }
 
         private void Win()
         {
-            throw (new NotImplementedException("Win"));
-        }
-
-        private void Lose()
-        {
-            throw (new NotImplementedException("Lose"));
+            _soundManager.PlayVictorySound();
+             SceneManager.LoadScene("Menu", LoadSceneMode.Single);
         }
     }
 }
