@@ -27,13 +27,13 @@ Interaction bugs with plate are known and due to OVR Scripts management.
 7. Make a "real mode" : customers come in front of the user and ask for a random recipe 
 
 ## Demo
-![Lobby](/Demo/lobby.png)
-![Menu : Global view](/Demo/menu.png)
-![Menu : Burger description](/Demo/menu_burger_description.png)
-![Game : Global View](/Demo/game.png)
-![Game : Ingredients distributors](/Demo/game_distributors.png)
-![Game : Plate & service bell](/Demo/game_service.png)
-![Game : Burger model](/Demo/game_burger_model.png)
+![Lobby](/Demo/lobby.PNG)
+![Menu : Global view](/Demo/menu.PNG)
+![Menu : Burger description](/Demo/menu_burger_description.PNG)
+![Game : Global View](/Demo/game.PNG)
+![Game : Ingredients distributors](/Demo/game_distributors.PNG)
+![Game : Plate & service bell](/Demo/game_service.PNG)
+![Game : Burger model](/Demo/game_burger_model.PNG)
 
 ## Installation
 No need, just play the executable available in the "Release" folder.
