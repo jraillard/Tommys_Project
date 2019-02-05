@@ -9,7 +9,10 @@ Project of a burger maker simulation for apprentice cook.
 - Sound on recipe serving
 
 ## Developpers
-[Julien RAILLARD](https://github.com/jraillard),[Mickaël MENEUX](https://github.com/MickaMx), [Florent YVON](https://github.com/florentyvon), [Aloïs BRETAUDEAU](https://github.com/kilo-graham)
+[Julien RAILLARD](https://github.com/jraillard)
+[Mickaël MENEUX](https://github.com/MickaMx)
+[Florent YVON](https://github.com/florentyvon)
+[Aloïs BRETAUDEAU](https://github.com/kilo-graham)
 
 ## Bugs
 Interaction bugs with plate are known and due to OVR Scripts management.
