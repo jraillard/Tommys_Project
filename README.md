@@ -28,12 +28,12 @@ Interaction bugs with plate are known and due to OVR Scripts management.
 
 ## Demo
 ![Lobby](/demo/lobby.png)
-![Menu : Global view](/demo/menu.png)
-![Menu : Burger description](/demo/menu_burger_description.png)
-![Game : Global View](/demo/game.png)
-![Game : Ingredients distributors](/demo/game_distributors.png)
-![Game : Plate & service bell](/demo/game_service.png)
-![Game : Burger model](/demo/game_burger_model.png)
+![Menu : Global view](/Demo/menu.png)
+![Menu : Burger description](/Demo/menu_burger_description.png)
+![Game : Global View](/Demo/game.png)
+![Game : Ingredients distributors](/Demo/game_distributors.png)
+![Game : Plate & service bell](/Demo/game_service.png)
+![Game : Burger model](/Demo/game_burger_model.png)
 
 ## Installation
 No need, just play the executable available in the "Release" folder.
