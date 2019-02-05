@@ -3,13 +3,20 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts.Game
 {
+    /// <summary>
+    /// Class for model burger maker
+    /// <author>Julien RAILLARD, Mickaël MENEUX, Florent YVON, Aloïs BRETAUDEAU</author>
+    /// </summary>
     public class BurgerModelBuilder : MonoBehaviour
     {
         public Vector3 _initialPosition;
         public Text _recipeName;
         private Vector3 _incrementedPosition;
 
-
+        /// <summary>
+        /// Constructor method
+        /// </summary>
+        /// <param name="recipe">burger recipe to make</param>
         public void BuildBurgerModel(Recipe recipe)
         {
             UnityEngine.Object tempIngredient = null;
@@ -32,6 +39,9 @@ namespace Assets.Scripts.Game
             _recipeName.text = recipe.recipeName;
         }
 
+        /// <summary>
+        /// Clear the model before creating the new one
+        /// </summary>
         public void CleanModel()
         {
             _incrementedPosition = _initialPosition;

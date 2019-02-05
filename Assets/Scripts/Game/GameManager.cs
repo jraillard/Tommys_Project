@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts.Game
 {
+    /// <summary>
+    /// Class for game management
+    /// <author>Julien RAILLARD, Mickaël MENEUX, Florent YVON, Aloïs BRETAUDEAU</author>
+    /// </summary>
     public class GameManager : MonoBehaviour
     {
         public SoundManager _soundManager;
@@ -14,22 +18,32 @@ namespace Assets.Scripts.Game
         private Recipes _recipesToPlay;
         private Recipe _currentRecipe;
 
-        void Awake()
+        /// <summary>
+        /// Awake event method
+        /// </summary>
+        public void Awake()
         {
             _recipesToPlay = null;
         }
 
-        // Use this for initialization
-        void Start()
+
+        /// <summary>
+        /// Start event method
+        /// </summary>
+        public void Start()
         {
             // recup dans fichier json (recipe.json) les recettes à jouer
             _recipesToPlay = RecipeManager.GetRecipesToPlay();
             _currentRecipe = _recipesToPlay.Get(0);
             _burgerModelBuilder.BuildBurgerModel(_currentRecipe);
         }
-
+        
+        /// <summary>
+        /// Check recipe put in the plate
+        /// </summary>
         public void CheckRecipe()
         {
+            // Get ingredients
             List<string> ingredients = new List<string>();
             foreach(Transform child in transform)
             {
@@ -38,6 +52,7 @@ namespace Assets.Scripts.Game
                 Destroy(child.gameObject);
             }
 
+            // Check recipe
             if (_currentRecipe.IsRecipeOk(ingredients))
             {
                 _soundManager.PlayRecipeSound(true);
@@ -49,6 +64,9 @@ namespace Assets.Scripts.Game
             else { _soundManager.PlayRecipeSound(false); Debug.Log("Wrong recipe"); }
         }
 
+        /// <summary>
+        /// Change recipe on game start or when previous one has been checked
+        /// </summary>
         private void ChangeRecipe()
         {
             _recipesToPlay.Remove(_currentRecipe);
@@ -63,6 +81,9 @@ namespace Assets.Scripts.Game
             }
         }
 
+        /// <summary>
+        /// Win a game
+        /// </summary>
         private void Win()
         {
             _soundManager.PlayVictorySound();

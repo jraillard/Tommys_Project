@@ -3,15 +3,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BellService : MonoBehaviour {
-
-    public GameManager _gameManager;
-
-    public void OnTriggerEnter(Collider collider)
+namespace Assets.Scripts.Game
+{
+    /// <summary>
+    /// Class for bell management
+    /// <author>Julien RAILLARD, Mickaël MENEUX, Florent YVON, Aloïs BRETAUDEAU</author>
+    /// </summary>
+    public class BellService : MonoBehaviour
     {
-        if (collider.tag == "Player")
+        public GameManager _gameManager;
+
+        /// <summary>
+        /// OnTriggerEnter event method
+        /// </summary>
+        /// <param name="collider">gameObject collided</param>
+        public void OnTriggerEnter(Collider collider)
         {
-            _gameManager.CheckRecipe();
+            if (collider.tag == "Player")
+            {
+                // if collided by player, check recipe made in the plate
+                _gameManager.CheckRecipe();
+            }
         }
     }
 }

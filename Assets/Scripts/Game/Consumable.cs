@@ -4,7 +4,9 @@ using UnityEngine;
 
 namespace Assets.Scripts.Game
 {
-    //Script on Consummable Box that Instantiate 
+    /// <summary>
+    /// Class for consumable management
+    /// </summary>
     public class Consumable : MonoBehaviour
     {
         private UnityEngine.Object _consumablePrefab;
@@ -15,6 +17,9 @@ namespace Assets.Scripts.Game
         private Transform _initialParent;
         private bool _isInstantiate;
 
+        /// <summary>
+        /// Get method for consumable initial rotation (quarternion)
+        /// </summary>
         public Quaternion InitialQuarternion
         {
             get
@@ -23,6 +28,9 @@ namespace Assets.Scripts.Game
             }
         }
 
+        /// <summary>
+        /// Start event method
+        /// </summary>
         public void Start()
         {
             _consumablePrefab = Resources.Load<UnityEngine.Object>($"Prefabs/Consumables/{gameObject.name.Split('(')[0]}");
@@ -33,11 +41,18 @@ namespace Assets.Scripts.Game
             _isInstantiate = false;
         }
 
+        /// <summary>
+        /// Method to initiate consumable prefab
+        /// </summary>
+        /// <param name="prefab">Prefab to set</param>
         public void SetPrefab(UnityEngine.Object prefab)
         {
             _consumablePrefab = prefab;
         }     
         
+        /// <summary>
+        /// Instantiate a consumable
+        /// </summary>
         public void Instantiate()
         {
             if(!_isInstantiate) //can instantiate only one time

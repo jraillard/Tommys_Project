@@ -5,14 +5,26 @@ using UnityEngine;
 
 namespace Assets.Scripts.Game
 {
+    /// <summary>
+    /// Class for plate management
+    /// <author>Julien RAILLARD, Mickaël MENEUX, Florent YVON, Aloïs BRETAUDEAU</author>
+    /// </summary>
     public class Assiette : MonoBehaviour
     {
         private IEnumerable<string> _thinConsumables = null;
 
+        /// <summary>
+        /// Start event method
+        /// </summary>
         public void Start()
         {
             _thinConsumables = new[] { "Steack", "TrancheDeChedar" };
         }
+
+        /// <summary>
+        /// OnTriggerStay event method
+        /// </summary>
+        /// <param name="other">gameObject collided</param>
         public void OnTriggerStay(Collider other)
         {
             GameObject collidedGameObject = other.gameObject;
