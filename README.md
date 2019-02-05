@@ -39,5 +39,5 @@ Interaction bugs with plate are known and due to OVR Scripts management.
 No need, just play the executable available in the "Release" folder.
  
 ### Prerequesites
-[Unity 3D - 2018.2.1 version](https://unity3d.com/fr/get-unity/download/archive)
+[Unity 3D - 2018.2.1 version](https://unity3d.com/fr/get-unity/download/archive) - 
 [Oculus Rift](https://www.oculus.com/rift/setup/)
