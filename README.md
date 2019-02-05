@@ -27,7 +27,7 @@ Interaction bugs with plate are known and due to OVR Scripts management.
 7. Make a "real mode" : customers come in front of the user and ask for a random recipe 
 
 ## Demo
-![Lobby](/demo/lobby.png)
+![Lobby](/Demo/lobby.png)
 ![Menu : Global view](/Demo/menu.png)
 ![Menu : Burger description](/Demo/menu_burger_description.png)
 ![Game : Global View](/Demo/game.png)
