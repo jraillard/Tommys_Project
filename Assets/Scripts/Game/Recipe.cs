@@ -36,10 +36,10 @@ namespace Assets.Scripts.Game
 
             foreach (string s in ingredients)
             {
-                str += $"- {s}";
+                str += $" - {s}";
             }
 
-            return str += "****\n";
+            return str += "\n\n****";
         }
     }
 }
